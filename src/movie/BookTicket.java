@@ -17,7 +17,7 @@ public class BookTicket {
        }
     }
     public static void showMenu(){
-        System.out.println(" 1.Book Ticket \n2.Cancel Ticket \n3.Show Movies \n4.Exit");
+        System.out.println("1.Book Ticket \n2.Cancel Ticket \n3.Show Movies \n4.Exit");
     }
 
 }

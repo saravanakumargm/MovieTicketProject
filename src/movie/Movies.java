@@ -1,9 +1,9 @@
 package movie;
 
-import javax.swing.plaf.nimbus.State;
-import java.sql.*;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 public class Movies {
     MovieDB db = new MovieDB();
 
@@ -18,6 +18,7 @@ public class Movies {
         Statement st = con.createStatement();
         String query = "select * from movie_details";
         ResultSet rs = st.executeQuery(query);
+        System.out.println("----------------------------------");
         while(rs.next()){
             System.out.println("Movie Name : " + rs.getString(1));
             System.out.println("Duration : " + rs.getString(2));
@@ -25,6 +26,7 @@ public class Movies {
             System.out.println("Available Tickets : " + rs.getInt(4));
             System.out.println();
         }
+        System.out.println("----------------------------------");
     }
 
 
